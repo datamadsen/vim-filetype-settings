@@ -1,4 +1,4 @@
-let b:did_ftplugin=1
+" let b:did_ftplugin=1
 
 " Show type information automatically when the cursor stops moving
 au CursorHold <buffer> call OmniSharp#TypeLookupWithoutDocumentation()
@@ -40,6 +40,7 @@ command! Documentation :OmniSharpDocumentation
 command! Actions :OmniSharpGetCodeActions
 
 command! Rename :OmniSharpRename
+command! RenameTo :OmniSharpRenameTo
 
 command! Format :OmniSharpCodeFormat
 
