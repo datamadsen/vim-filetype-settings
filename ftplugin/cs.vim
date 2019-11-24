@@ -69,3 +69,5 @@ map zM :setlocal foldlevel=2<CR>
 setlocal signcolumn=yes
 
 setlocal fo=crqj
+
+compiler dotnet_build
