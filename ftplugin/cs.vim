@@ -57,13 +57,9 @@ nnoremap <Leader><Space> :OmniSharpGetCodeActions<CR>
 " Run code actions with text selected in visual mode to extract method
 xnoremap <Leader><Space> :call OmniSharp#GetCodeActions('visual')<CR>
 
-
-" Fold at the method level and nothing below or above that.
-setlocal foldmethod=indent
-setlocal foldnestmax=3
-setlocal foldlevelstart=2
-setlocal foldlevel=2
-map zM :setlocal foldlevel=2<CR>
+" folding
+setlocal foldmethod=syntax
+map zM :setlocal foldlevel=1<CR>
 
 " We need the sign column to display errors and stuff.
 setlocal signcolumn=yes
