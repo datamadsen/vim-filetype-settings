@@ -1,8 +1,5 @@
 let b:did_ftplugin=1
 
-" Show type information automatically when the cursor stops moving
-" au CursorHold <buffer> call OmniSharp#TypeLookup()
-
 nnoremap <buffer> <Leader>dc :OmniSharpDocumentation<CR>
 nnoremap <buffer> <C-\> :OmniSharpSignatureHelp<CR>
 command! Signature :OmniSharpSignatureHelp
@@ -57,11 +54,12 @@ nnoremap <Leader><Space> :OmniSharpGetCodeActions<CR>
 " Run code actions with text selected in visual mode to extract method
 xnoremap <Leader><Space> :call OmniSharp#GetCodeActions('visual')<CR>
 
-" Automatically popup the method signature helper where it can
+" Automatically popup the method signature helper where it can.
+" Will not work with auto-pairing plugins like pear-tree.
 inoremap <expr> ( AutoSignatureHelp()
-function! AutoSignatureHelp() abort
-    silent call  OmniSharp#actions#signature#SignatureHelp()
-    return "()\<left>"
+function! AutoSignatureHelp()
+    call  OmniSharp#actions#signature#SignatureHelp()
+    return "("
 endfunction
 
 " folding
