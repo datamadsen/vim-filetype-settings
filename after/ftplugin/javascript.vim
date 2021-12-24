@@ -3,7 +3,8 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-json',
   \ 'coc-css',
-  \ 'coc-tailwindcss'
+  \ 'coc-tailwindcss',
+  \ 'coc-highlight'
   \ ]
 
 " Some servers have issues with backup files, see #649.
@@ -77,7 +78,7 @@ function! s:show_documentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
-autocmd FileType javascript CursorHold * silent call CocActionAsync('highlight')
+autocmd FileType javascript CursorHold * silent! call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
