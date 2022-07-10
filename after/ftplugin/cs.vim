@@ -18,6 +18,10 @@ command! Symbol :OmniSharpFindSymbol
 command! FindSymbol :OmniSharpFindSymbol
 nnoremap <buffer> <Leader>fs :OmniSharpFindSymbol<CR>
 
+command! Type :OmniSharpFindType
+command! FindType :OmniSharpFindType
+nnoremap <buffer> <Leader>ft :OmniSharpFindType<CR>
+
 command! Usages :OmniSharpFindUsages
 command! FindUsages :OmniSharpFindUsages
 nnoremap <buffer> <Leader>fu :OmniSharpFindUsages<CR>
