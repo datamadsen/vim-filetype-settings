@@ -66,6 +66,11 @@ function! AutoSignatureHelp()
     return "("
 endfunction
 
+augroup prewrites
+   autocmd!
+    autocmd BufWritePre,FileWritePre *.cs :FixUsings
+augroup END
+
 " folding
 setlocal foldmethod=syntax
 map zM :setlocal foldlevel=1<CR>
